@@ -26,8 +26,9 @@ class Player {
         this.updateRating(k * (0 - expectedWinPercent));
     }
     
-    draw() {
+    draw(expectedWinPercent) {
          this.draws++;
+        this.updateRating(k * (0.5 - expectedWinPercent));
     }
 }
 
@@ -47,6 +48,11 @@ class Game {
     player2Won() {
         this.player1.lose(this.e1);
         this.player2.win(this.e2);
+    }
+    
+    draw() {
+        this.player1.draw(this.e1);
+        this.player2.draw(this.e2);
     }
 }
 
@@ -111,8 +117,17 @@ function createGame() {
     document.getElementById("expectedOutcome").innerText = `Expected chances of player1 winning are ${Math.round(game.e1 * 100)}%. Player 1 wins = ${Math.round(k * (1-game.e1))}. Player 2 wins = ${Math.round(k * (1-game.e2))}`
 }
 
-function declareWinner(p1) {
-    p1 ? game.player1Won() : game.player2Won();
+function declareWinner(winner) {
+    switch (winner) {
+        case 1:
+            game.player1Won();
+            break;
+        case 2:
+            game.player2Won();
+            break;
+        default:
+            game.draw();
+    }
     updatePlayers(players);
     createGame();
 }

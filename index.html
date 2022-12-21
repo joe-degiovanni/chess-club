@@ -19,11 +19,12 @@
 </table>
 
 <h2>New Matchup</h2>
-player1 <select id="player1" onchange="createGame()"></select><br/>
-player2 <select id="player2" onchange="createGame()"></select><br/>
+Player 1 <select id="player1" onchange="createGame()"></select><br/>
+Player 2 <select id="player2" onchange="createGame()"></select><br/>
 <span id="expectedOutcome"></span><br/>
-<button onclick="declareWinner(true)">Player1 Won!</button>
-<button onclick="declareWinner(false)">Player2 Won!</button>
+<button onclick="declareWinner(1)">Player 1 Won!</button>
+<button onclick="declareWinner(2)">Player 2 Won!</button>
+<button onclick="declareWinner(0)">Draw</button>
 
 <script src="main.js"></script>
 </body>

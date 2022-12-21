@@ -132,6 +132,14 @@ function declareWinner(winner) {
     createGame();
 }
 
+function addPlayer() {
+    let name = document.getElementById("newPlayerName").value;
+    if(!players.find(p => p.name === name)) {
+        players.push(new Player(name, 1000));
+        updatePlayers(players);
+    }
+}
+
 loadPlayers();
 let game = null;
 createGame();

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Club</title>
+</head>
+<body>
+<h1>Chess Club</h1>
+<table>
+    <thead>
+    <tr>
+        <td>Player</td>
+        <td>Rating (delta)</td>
+        <td>W-L-T</td>
+    </tr>
+    </thead>
+    <tbody id="players">
+    </tbody>
+</table>
+
+<h2>New Matchup</h2>
+player1 <select id="player1" onchange="createGame()"></select><br/>
+player2 <select id="player2" onchange="createGame()"></select><br/>
+<span id="expectedOutcome"></span><br/>
+<button onclick="declareWinner(true)">Player1 Won!</button>
+<button onclick="declareWinner(false)">Player2 Won!</button>
+
+<script src="main.js"></script>
+</body>
+</html>

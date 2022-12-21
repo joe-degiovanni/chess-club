@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Lilly",
+    "rating": 1000,
+    "change": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0
+  },
+  {
+    "name": "Ben",
+    "rating": 1000,
+    "change": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0
+  },
+  {
+    "name": "Molly",
+    "rating": 1000,
+    "change": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0
+  },
+  {
+    "name": "Jim",
+    "rating": 1000,
+    "change": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0
+  },
+  {
+    "name": "Joe",
+    "rating": 1000,
+    "change": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0
+  }
+] 

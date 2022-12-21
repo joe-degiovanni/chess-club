@@ -91,7 +91,8 @@ function updatePlayers(array) {
 function createListItem(player) {
     let row = document.createElement("tr");
     row.append(createCell(player.name));
-    row.append(createCell(`${Math.round(player.rating)} (${Math.round(player.change)})`));
+    row.append(createCell(Math.round(player.rating)));
+    row.append(createCell(Math.round(player.change)));
     row.append(createCell(`${player.wins}-${player.losses}-${player.draws}`));
     return row;
 }

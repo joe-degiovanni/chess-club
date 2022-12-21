@@ -1,0 +1,21 @@
+body {
+    width: 900px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+thead {
+    background-color: lightblue;
+}
+
+tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+th {
+    text-align: center;
+    padding: 10px;
+}
+td {
+    padding: 5px;
+}

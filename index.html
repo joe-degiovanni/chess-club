@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Chess Club</title>
+    <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-<h1>Chess Club</h1>
-<h2>Leaderboard</h2>
-<table>
-    <thead>
-    <tr>
-        <td>Player</td>
-        <td>Rating (delta)</td>
-        <td>W-L-T</td>
-    </tr>
-    </thead>
-    <tbody id="players">
-    </tbody>
-</table>
+<main>
+    <h1>Chess Club</h1>
+    <h2>Leaderboard</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Player</th>
+            <th>Rating</th>
+            <th>Change</th>
+            <th>W-L-T</th>
+        </tr>
+        </thead>
+        <tbody id="players">
+        </tbody>
+    </table>
 
-<button onclick="exportData()">Export Data</button>
-<hr/>
+    <button onclick="exportData()">Export Data</button>
+    <hr/>
 
-<h2>New Matchup</h2>
-Player 1 <select id="player1" onchange="createGame()"></select><br/>
-Player 2 <select id="player2" onchange="createGame()"></select><br/>
-<span id="expectedOutcome"></span><br/>
-<button onclick="declareWinner(1)">Player 1 Won!</button>
-<button onclick="declareWinner(2)">Player 2 Won!</button>
-<button onclick="declareWinner(0)">Draw</button>
+    <h2>New Matchup</h2>
+    Player 1 <select id="player1" onchange="createGame()"></select><br/>
+    Player 2 <select id="player2" onchange="createGame()"></select><br/>
+    <span id="expectedOutcome"></span><br/>
+    <button onclick="declareWinner(1)">Player 1 Won!</button>
+    <button onclick="declareWinner(2)">Player 2 Won!</button>
+    <button onclick="declareWinner(0)">Draw</button>
 
-<hr/>
-<h2>Add New Player</h2>
-<input id="newPlayerName"/>
-<button onclick="addPlayer()">Add</button>
-
+    <hr/>
+    <h2>Add New Player</h2>
+    <input id="newPlayerName"/>
+    <button onclick="addPlayer()">Add</button>
+</main>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const k = 32;
-let players = [];
+let players = JSON.parse(localStorage.getItem('players')) || [];
 
 class Player {
     constructor(name, rating) {
@@ -60,20 +60,6 @@ function findPlayerByName(name) {
     return players.find(p => p.name === name) || new Player(name, 1000);
 }
 
-function getJSON(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-        callback(xhr.response);
-    };
-    xhr.send();
-}
-
-function loadPlayers() {
-    getJSON('data/players.json', (r) => updatePlayers(r));
-}
-
 function updatePlayers(array) {
     players = array.map(p => Object.assign(new Player(), p));
     let list = document.getElementById("players");
@@ -86,6 +72,8 @@ function updatePlayers(array) {
     let p2Options = document.getElementById("player2");
     p2Options.innerHTML = ''
     players.forEach(p => p2Options.append(createOption(p)));
+
+    localStorage.setItem('players', JSON.stringify(players));
 }
 
 function createListItem(player) {
@@ -141,7 +129,7 @@ function addPlayer() {
     }
 }
 
-loadPlayers();
+updatePlayers(players);
 let game = null;
 createGame();
 

@@ -11,5 +11,12 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "degiovanni-chess-club",
+      "strict_min_version": "42.0"
+    }
+  }
+
 }

@@ -2,13 +2,13 @@
   "name": "Degiovanni Chess Club",
   "short_name": "Chess Club",
   "start_url": "/index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#f7f7f7",
   "theme_color": "#5e72e4",
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "48x48",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

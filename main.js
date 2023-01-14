@@ -161,3 +161,5 @@ function download(filename, text) {
 
     document.body.removeChild(element);
 }
+
+navigator.serviceWorker.register('/sw.js');
